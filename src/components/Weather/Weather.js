@@ -11,7 +11,7 @@ const WeatherContainer = styled.div`
 	display: flex;
 `;
 
-class ForeCast extends React.Component {
+class Weather extends React.Component {
 	state = {
 		fullData: [],
 		dailyData: [],
@@ -48,8 +48,6 @@ class ForeCast extends React.Component {
 	};
 
 	render() {
-    console.log(this.state.fullData)
-    
 		return (
 			<>
 				<WeatherContainer>
@@ -60,4 +58,4 @@ class ForeCast extends React.Component {
 	}
 }
 
-export default ForeCast;
+export default Weather;
