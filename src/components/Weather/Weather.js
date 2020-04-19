@@ -8,7 +8,9 @@ import CurrentDayCard from "./CurrentDayCard";
 const WeatherContainer = styled.div`
 	width: 100%;
 	height: 100%;
-	display: flex;
+  display: flex;
+  flex-flow: column;
+  color: white;
 `;
 
 class Weather extends React.Component {
@@ -50,8 +52,10 @@ class Weather extends React.Component {
 	render() {
 		return (
 			<>
+      {console.log(this.state.currentDay)}
 				<WeatherContainer>
-					<WeekCard>{this.formatDayCards()}</WeekCard>
+          {this.state.currentDay ? <CurrentDayCard data={this.state.currentDay}/> : null}
+					{this.state.dailyData ? <WeekCard>{this.formatDayCards()}</WeekCard> : null}
 				</WeatherContainer>
 			</>
 		);

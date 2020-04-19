@@ -34,10 +34,9 @@ class DragGrid extends React.Component {
 					className="layout"
 					cols={12}
 					rowHeight={rowSize()}
-					width={windowWidth}
-				>
+					width={windowWidth}>
 					{React.Children.map(children, (child, i) =>
-						i < 1 ? (
+						i === 0 ? (
 							<div
 								key={i}
 								data-grid={{
@@ -50,23 +49,119 @@ class DragGrid extends React.Component {
 									minH: 4,
 									maxH: 12,
 								}}
-								className="card"
-							>
+								className="card">
 								{child}
 							</div>
-						) : i == 2 || i == 3 ? (
+						) : i === 1 ? (
 							<div
 								key={i}
 								data-grid={{
-									x: i * i,
+									x: 4,
 									y: 0,
 									w: 4,
 									h: 4,
 									minW: 4,
 									maxW: 12,
 								}}
-								className="card"
-							>
+								className="card">
+								{child}
+							</div>
+						) : i === 2 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 8,
+									y: 0,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
+								{child}
+							</div>
+						) : i === 3 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 0,
+									y: 4,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
+								{child}
+							</div>
+						) : i === 4 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 4,
+									y: 4,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
+								{child}
+							</div>
+						) : i === 5 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 8,
+									y: 4,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
+								{child}
+							</div>
+						) : i === 6 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 0,
+									y: 8,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
+								{child}
+							</div>
+						) : i === 7 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 4,
+									y: 8,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
+								{child}
+							</div>
+						) : i === 8 ? (
+							<div
+								key={i}
+								data-grid={{
+									x: 8,
+									y: 8,
+									w: 4,
+									h: 4,
+									minW: 4,
+									maxW: 12,
+								}}
+								className="card">
 								{child}
 							</div>
 						) : null

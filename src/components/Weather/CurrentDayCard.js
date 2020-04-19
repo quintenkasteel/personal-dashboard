@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import styled from "styled-components";
+import WeatherIcon from "./WeatherIcon";
 
 const CurrentDayCardContainer = styled.div`
 	display: flex;
@@ -14,18 +15,32 @@ const CurrentDayCard = ({ data }) => {
 
 	newDate.setTime(weekday);
 
-	// const imgURL = `owf owf-${data.weather} owf-5x`;
+	const IconContainer = styled.div`
+		height: 100px;
+		width: 100px;
+    position: relative;
 
-	console.log(data.main.temp, "data");
+		object {
+			height: 100%;
+			width: 100%;
+		}
+	`;
 
 	return (
 		<>
-			<CurrentDayCardContainer>
-				<div className="day-card">
-					<h4 className="day-card-title">{moment(newDate).format("dddd")}</h4>
-					{/* <h2>{Math.round(data.main.temp)} °F</h2> */}
-				</div>
-			</CurrentDayCardContainer>
+			{data ? (
+				<CurrentDayCardContainer>
+					{data.dt ? (
+						<h4 className="day-card-title">{moment(newDate).format("dddd")}</h4>
+					) : null}
+					{data.main ? <h2>{Math.round(data.main.temp)} °F</h2> : null}
+					{data.weather ? (
+						<IconContainer className="weather-icon-container">
+							<WeatherIcon id={data.weather[0].id} />
+						</IconContainer>
+					) : null}
+				</CurrentDayCardContainer>
+			) : null}
 		</>
 	);
 };

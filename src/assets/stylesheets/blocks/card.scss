@@ -1,0 +1,11 @@
+.card {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.inner-card {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
