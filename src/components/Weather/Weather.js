@@ -56,7 +56,7 @@ class Weather extends React.Component {
 
 	componentDidMount() {
 		this.getLocation();
-		setInterval(this.getLocation, 30000);
+		setInterval(this.getLocation, 600000);
 	}
 
 	formatDayCards = () => {
