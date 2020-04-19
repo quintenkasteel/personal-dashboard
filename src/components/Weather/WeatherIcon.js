@@ -113,8 +113,8 @@ import wind from "../../assets/icons/weathericons/svg/wind.svg";
 
 const currentTime = new Date().getHours();
 
-const WeatherIcon = ({ name, today, id }) => {
-	if (currentTime >= 6 && currentTime <= 20) {
+const WeatherIcon = ({ name, id }) => {
+	if (currentTime >= 6 && currentTime < 20) {
 		return id === 200 || name === "cloudLightningSun" ? (
 			<object type="image/svg+xml" aria-label="" data={cloudLightningSun} />
 		) : id === 201 || name === "cloudLightningSun" ? (

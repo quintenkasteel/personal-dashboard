@@ -1,5 +1,21 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
+import styled from "styled-components";
+
+const ToDoListContainer = styled.div`
+	display: flex;
+  flex-flow: column;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+	overflow-y: auto;
+`;
+
+const ToDoUnorderedList = styled.ul`
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+`;
 
 class ToDoList extends React.Component {
 	// constructor(props) {
@@ -9,9 +25,9 @@ class ToDoList extends React.Component {
 
 	Remove = (e) => {
 		this.props.onDelete(e);
-  };
+	};
 
-  Check = (e) => {
+	Check = (e) => {
 		this.props.onCheck(e);
 	};
 
@@ -22,13 +38,18 @@ class ToDoList extends React.Component {
 					key={i}
 					value={i}
 					onRemove={this.Remove}
-					isChecked={this.Check}
-				>
+					isChecked={this.Check}>
 					{item.itemText}
 				</ToDoItem>
 			);
 		};
-		return <ul>{this.props.items.map(createItem, this)}</ul>;
+		return (
+			<ToDoListContainer>
+				<ToDoUnorderedList>
+					{this.props.items.map(createItem, this)}
+				</ToDoUnorderedList>
+			</ToDoListContainer>
+		);
 	}
 }
 

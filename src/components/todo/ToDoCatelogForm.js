@@ -1,4 +1,41 @@
 import React from "react";
+import styled from "styled-components";
+
+const ToDoCatelogFormContainer = styled.form`
+	display: flex;
+  flex-flow: row;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+`;
+
+const ToDoCatelogFormInput = styled.input`
+	border: 0;
+	outline: 0;
+  background: transparent;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+
+	&:focus {
+		outline: 0;
+  }
+  &::placeholder {
+    font-weight: bold;
+  }
+`;
+
+const ToDoCatelogFormSubmit = styled.input`
+  border: 0;
+  padding: 0 0.3rem;
+  margin: 0;
+	background: transparent;
+	color: black;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+`;
 
 class ToDoCatelogForm extends React.Component {
 	constructor(props) {
@@ -23,24 +60,20 @@ class ToDoCatelogForm extends React.Component {
 	render() {
 		return (
 			<>
-				<div className="row">
-					<form onSubmit={this.handleSubmit}>
-						<div className="form-group ">
-							<input
-								type="text"
-								className="newTodoCatalogField form-control"
-								onChange={this.onChange}
-								value={this.state.item}
-							/>
-							<input
-								type="submit"
-								className="btn btn-default"
-								style={{ float: "left", marginLeft: "5px" }}
-								value="Add"
-							/>
-						</div>
-					</form>
-				</div>
+				<ToDoCatelogFormContainer onSubmit={this.handleSubmit}>
+					<ToDoCatelogFormInput
+						type="text"
+						className="newTodoCatalogField form-control"
+						placeholder="Add New list"
+						onChange={this.onChange}
+						value={this.state.item}
+					/>
+					<ToDoCatelogFormSubmit
+						type="submit"
+						className="btn btn-default"
+						value="+"
+					/>
+				</ToDoCatelogFormContainer>
 			</>
 		);
 	}
