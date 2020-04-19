@@ -35,8 +35,10 @@ const ToDoHeader = styled.div`
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
-	background: #003cfe;
-	padding: 15px;
+	padding: 1rem;
+	font-weight: bold;
+	background: #00000069;
+	margin-bottom: 1rem;
 
 	span {
 		transform: rotate(90deg);
@@ -48,16 +50,16 @@ const SideBar = styled.div`
 	position: absolute;
 	top: 0;
 	left: -100%;
-  display: none;
+	display: none;
 	background: white;
 	color: black;
 	flex-flow: column;
 	z-index: 2;
-  transition: left 0.4s;
+	transition: left 0.4s;
 
-  h3 {
-    padding: 1rem 0.5rem;
-  }
+	h3 {
+		padding: 1rem 0.5rem;
+	}
 
 	.sidebar-open & {
 		display: flex;
@@ -114,8 +116,8 @@ class ToDo extends React.Component {
 	setSelectedCatalog = (index) => {
 		this.state.selectedCatelog = index;
 		this.setState({
-      selectedCatelog: index,
-      sideMenuOpen: false,
+			selectedCatelog: index,
+			sideMenuOpen: false,
 		});
 	};
 
@@ -176,12 +178,12 @@ class ToDo extends React.Component {
 					/>
 					<ToDoCatalogForm onFormSubmit={this.AddCatelog} />
 				</SideBar>
-				<ToDoForm onFormSubmit={this.createItem} />
 				<ToDoList
 					items={this.state.Todo[this.state.selectedCatelog].items}
 					onDelete={this.deleteItem}
 					onCheck={this.checkItem}
 				/>
+				<ToDoForm onFormSubmit={this.createItem} />
 			</ToDoContainer>
 		);
 	}

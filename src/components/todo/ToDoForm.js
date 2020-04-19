@@ -6,6 +6,8 @@ const ToDoFormContainer = styled.form`
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  padding:0.5rem 1rem;
+  background: #00000069;
 `
 
 const ToDoInput = styled.input`
@@ -15,14 +17,41 @@ const ToDoInput = styled.input`
   width: 100%;
   margin: 0;
   min-height: 2rem;
+  border: 0;
+  background: 0;
+  color: white;
+  font-size: 1rem;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0;
+    border: 0;
+  }
+  &::placeholder {
+    color: white;
+  }
 `
 
 const ToDoSubmit = styled.input`
-  background: red;
+  background: none;
   min-width: 0;
   height: 100%;
   display: flex;
   margin: 0;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  padding: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: 0;
+    border: 0;
+  }
 `
 
 class ToDoForm extends React.Component {
@@ -53,14 +82,15 @@ class ToDoForm extends React.Component {
 					<ToDoInput
 						type="text"
 						className="todoField form-control"
-						ref="item"
+            ref="item"
+            placeholder="Add a To Do"
 						onChange={this.onChange}
 						value={this.state.item}
 					/>
 					<ToDoSubmit
 						type="submit"
 						className="btn btn-default"
-						value="Add"
+						value="+"
 					/>
 				</ToDoFormContainer>
 		);

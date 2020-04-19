@@ -8,7 +8,9 @@ const ToDoListContainer = styled.div`
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-	overflow-y: auto;
+  overflow-y: auto;
+  padding: 1rem;
+  height: 100%;
 `;
 
 const ToDoUnorderedList = styled.ul`
