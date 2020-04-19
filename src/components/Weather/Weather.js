@@ -23,7 +23,7 @@ class Weather extends React.Component {
 	componentDidMount = () => {
 		const weatherAPI_KEY = "2da36ddc24a5b9e951ccd807f9ea0680";
 
-		const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=${weatherAPI_KEY}`;
+		const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=${weatherAPI_KEY}`;
 
 		fetch(weatherURL)
 			.then((res) => res.json())
