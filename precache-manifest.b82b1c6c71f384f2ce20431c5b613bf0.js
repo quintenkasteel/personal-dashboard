@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "14ee24621b8d9cb96ef9f9251e225aa5",
+    "revision": "c0710fe508084dc3efcf3cae13fd4ff9",
     "url": "/personal-dashboard/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/personal-dashboard/static/css/6.f290e260.chunk.css"
   },
   {
-    "revision": "0a93c80e432fc18461fc",
-    "url": "/personal-dashboard/static/css/main.0cd9adb9.chunk.css"
+    "revision": "ed1bf382e65f0666074f",
+    "url": "/personal-dashboard/static/css/main.547aaabb.chunk.css"
   },
   {
     "revision": "281e08faedbf41a62255",
@@ -72,7 +72,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/personal-dashboard/static/js/9.3dfb0c0e.chunk.js"
   },
   {
-    "revision": "0a93c80e432fc18461fc",
+    "revision": "ed1bf382e65f0666074f",
     "url": "/personal-dashboard/static/js/main.00bcffe7.chunk.js"
   },
   {
@@ -364,6 +364,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/personal-dashboard/static/media/moonPhaseFull.3bbe7d2e.svg"
   },
   {
+    "revision": "00ee27ed865f22d77c7cd0c1f4290ab9",
+    "url": "/personal-dashboard/static/media/owfont-regular.00ee27ed.svg"
+  },
+  {
     "revision": "3d73387c2a1e21f207a8357724f536ba",
     "url": "/personal-dashboard/static/media/owfont-regular.3d73387c.ttf"
   },
@@ -374,10 +378,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ed668bf0b123371be46d005b428f6188",
     "url": "/personal-dashboard/static/media/owfont-regular.ed668bf0.woff"
-  },
-  {
-    "revision": "f3ce0ef136eaaf2b1db22cf4069cb5dc",
-    "url": "/personal-dashboard/static/media/owfont-regular.f3ce0ef1.svg"
   },
   {
     "revision": "20549912e0c690718374b2158186dca5",
