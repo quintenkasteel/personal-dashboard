@@ -13,7 +13,7 @@ class ToDoCatelog extends React.Component {
 	};
 
 	checkActive = (i) => {
-		if (i == this.props.selectedID) {
+		if (i === this.props.selectedID) {
 			return "list-group-item active";
 		} else {
 			return "list-group-item ";
@@ -29,15 +29,14 @@ class ToDoCatelog extends React.Component {
 				<div className="list-group">
 					{allitems.map((item, i) => {
 						var _class = "";
-						if (i == this.props.selectedID) {
+						if (i === selectedID) {
 							_class = "list-group-item active";
 						} else {
 							_class = "list-group-item ";
             }
             
 						return (
-							<a
-								href="#"
+							<span
 								key={i}
 								data-id={i}
 								className={_class}
@@ -45,7 +44,7 @@ class ToDoCatelog extends React.Component {
 							>
 								<span className="badge">{item.items.length}</span>
 								{item.name}
-							</a>
+							</span>
 						);
 					}, this)}
 				</div>

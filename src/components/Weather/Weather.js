@@ -29,7 +29,7 @@ class Weather extends React.Component {
 				lat: position.coords.latitude,
       });
       
-      const weatherAPI_KEY = "2da36ddc24a5b9e951ccd807f9ea0680";
+      const weatherAPI_KEY = process.env.REACT_APP_WEATHER_API;
 			const weatherAPI_BASE =
 				"https://api.openweathermap.org/data/2.5/forecast";
 			const lat = position.coords.latitude;
