@@ -123,7 +123,7 @@ class News extends React.Component {
 		};
 
 		return (
-			<div>
+			<>
 				<input
 					type="text"
 					value={this.state.value}
@@ -147,7 +147,7 @@ class News extends React.Component {
 						<p>loading....</p>
 					)}
 				</NewsContainer>
-			</div>
+			</>
 		);
 	}
 }
