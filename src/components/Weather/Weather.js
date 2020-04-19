@@ -44,7 +44,6 @@ class Weather extends React.Component {
 					);
 
 					const currentDayData = data.list[0];
-          console.log(weatherURL)
 					this.setState({
 						fullData: data.list,
 						dailyData: dailyData,
@@ -77,7 +76,6 @@ class Weather extends React.Component {
 						<WeekCard>{this.formatDayCards()}</WeekCard>
 					) : null}
 					{!this.state.fullData ? <p>Cant get location</p> : null}
-					{console.log(this.state.fullData)}
 				</WeatherContainer>
 			</>
 		);
